@@ -6,6 +6,7 @@ import re
 import subprocess
 import sys
 import tkinter as tk
+import jinja2
 
 from pathlib import Path
 from tkinter import filedialog
