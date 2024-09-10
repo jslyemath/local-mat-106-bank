@@ -5,64 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="191d7f21-d991-424c-8a87-18cf4d1c7dd8" name="Changes" comment="Fully set up framework. Awaiting modifications for certain local versions.">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/D1_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/D1_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/D2_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/D2_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/D3_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/D3_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/D4_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/D4_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/F1_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/F1_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/F2_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/F2_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/F3_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/F3_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/F4_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/F4_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/F5_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/F5_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/G1_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/G1_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/G2_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/G2_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/N1_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/N1_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/N2_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/N2_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/N3_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/N3_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/N4_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/N4_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Skill List.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TeX Files/D1/D1 v36709.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TeX Files/D1/D1 v55637.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TeX Files/Skill Descriptions.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TeX Files/W1/W1 v36709.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TeX Files/W1/W1 v55637.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TeX Files/skillcheckpoints.sty" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/W1_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/W1_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/W2_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/W2_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/W3_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/W3_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/W4_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/W4_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/W5_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/W5_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/W6_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/W6_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_template.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/slye_math.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/localCheckIt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/localCheckIt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_generator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724011075831</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fully set up framework. Awaiting modifications for certain local versions.">
+      <option name="closed" value="true" />
+      <created>1725977556455</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725977556455</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnknownFeatures">
