@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191d7f21-d991-424c-8a87-18cf4d1c7dd8" name="Changes" comment="Added example of bat file">
+    <list default="true" id="191d7f21-d991-424c-8a87-18cf4d1c7dd8" name="Changes" comment="Fixed W3 formatting error (again).">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeX Files/skillcheckpoints.sty" beforeDir="false" afterPath="$PROJECT_DIR$/TeX Files/skillcheckpoints.sty" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725985293375</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed W3 formatting error (again).">
+      <option name="closed" value="true" />
+      <created>1726579671215</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1726579671215</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -185,6 +193,7 @@
     <MESSAGE value="Added README" />
     <MESSAGE value="Updated gitignore file" />
     <MESSAGE value="Added example of bat file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added example of bat file" />
+    <MESSAGE value="Fixed W3 formatting error (again)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed W3 formatting error (again)." />
   </component>
 </project>

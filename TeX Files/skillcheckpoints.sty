@@ -478,10 +478,11 @@ title=#2,#1}
 }
 
 \newcommand{\setname}[1]{%
-    \fancyhead[L]{\sffamily\color{darkgray} Name:
+    \fancyhead[L]{\sffamily\color{darkgray} Name: %
     \ifthenelse{\equal{#1}{Blank} \OR \equal{#1}{blank}}%
         {\underline{\Large\phantom{Blank}\hspace{2.9in}}}%
         {\Large #1}}%
+    \pdfbookmark[0]{\texorpdfstring{#1}{#1}}{#1}%
 }
 
 \makeatletter
