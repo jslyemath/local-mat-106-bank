@@ -57,7 +57,7 @@ def generate(**kwargs):
 
             random.shuffle(sides)
 
-            return f'\\mbox{{${sides[0]} =\\:$}}\\mbox{{${sides[1]}$}}', ans, 'vA'
+            return f'\\mbox{{${sides[0]} =\\:$}} \\mbox{{${sides[1]}$}}', ans, 'vA'
 
         def vB(op, inserts, fill_op):
             chunks = sm.samples([f'{inserts[7]}',
@@ -71,7 +71,7 @@ def generate(**kwargs):
 
             random.shuffle(sides)
 
-            return f'\\mbox{{${sides[0]} =\\:$}}\\mbox{{${sides[1]}$}}', ans, 'vB'
+            return f'\\mbox{{${sides[0]} =\\:$}} \\mbox{{${sides[1]}$}}', ans, 'vB'
 
         def vC(op, inserts, fill_op):
             if op == '+':
@@ -91,7 +91,7 @@ def generate(**kwargs):
 
             random.shuffle(sides)
 
-            return f'\\mbox{{${sides[0]} =\\:$}}\\mbox{{${sides[1]}$}}', ans, 'vC'
+            return f'\\mbox{{${sides[0]} =\\:$}} \\mbox{{${sides[1]}$}}', ans, 'vC'
 
         possible_versions = ['vA', 'vB', 'vC']
 
@@ -130,7 +130,7 @@ def generate(**kwargs):
 
         random.shuffle(sides)
 
-        return f'\\mbox{{${sides[0]} =\\:$}}\\mbox{{${sides[1]}$}}', ans, 'v0'
+        return f'\\mbox{{${sides[0]} =\\:$}} \\mbox{{${sides[1]}$}}', ans, 'v0'
 
     def create_ident(op='+', fill_op='+', inserts=['a', 'b', 'c', 'd', 'w', 'x', 'y', 'z'], used_versions=[]):
         for o in (op, fill_op):
@@ -164,7 +164,7 @@ def generate(**kwargs):
 
             random.shuffle(sides)
 
-            return f'\\mbox{{${sides[0]} =\\:$}}\\mbox{{${sides[1]}$}}', ans, 'vA'
+            return f'\\mbox{{${sides[0]} =\\:$}} \\mbox{{${sides[1]}$}}', ans, 'vA'
 
         def vB(op, inserts, fill_op):
             op_ident = {'+': '0', '\\times': '1'}
@@ -194,7 +194,7 @@ def generate(**kwargs):
 
             random.shuffle(sides)
 
-            return f'\\mbox{{${sides[0]} =\\:$}}\\mbox{{${sides[1]}$}}', ans, 'vB'
+            return f'\\mbox{{${sides[0]} =\\:$}} \\mbox{{${sides[1]}$}}', ans, 'vB'
 
         possible_versions = ['vA', 'vB']
 
@@ -228,7 +228,7 @@ def generate(**kwargs):
 
         random.shuffle(sides)
 
-        return f'\\mbox{{${sides[0]} =\\:$}}\\mbox{{${sides[1]}$}}', ans, 'v0'
+        return f'\\mbox{{${sides[0]} =\\:$}} \\mbox{{${sides[1]}$}}', ans, 'v0'
 
     def create_dist(inserts=['a', 'b', 'c', 'd', 'w', 'x', 'y', 'z']):
         fill_op = '+'
@@ -270,7 +270,7 @@ def generate(**kwargs):
 
         random.shuffle(sides)
 
-        return f'\\mbox{{${sides[0]} =\\:$}}\\mbox{{${sides[1]}$}}', ans, 'v0'
+        return f'\\mbox{{${sides[0]} =\\:$}} \\mbox{{${sides[1]}$}}', ans, 'v0'
 
     prob_ans_ver = []
 

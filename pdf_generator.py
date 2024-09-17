@@ -6,12 +6,10 @@ import re
 import subprocess
 import sys
 import tkinter as tk
-import jinja2
 
 from pathlib import Path
 from tkinter import filedialog
 from tkinter import messagebox
-import time
 
 from jinja2 import FileSystemLoader
 from latex.jinja2 import make_env

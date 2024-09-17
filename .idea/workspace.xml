@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191d7f21-d991-424c-8a87-18cf4d1c7dd8" name="Changes" comment="Updated gitignore file">
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_pdf_generator.bat" afterDir="false" />
+    <list default="true" id="191d7f21-d991-424c-8a87-18cf4d1c7dd8" name="Changes" comment="Added example of bat file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pdf_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_generator.py" afterDir="false" />
     </list>
@@ -26,18 +24,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "jslyemath"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jslyemath&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:jslyemath/mat-106-bank.git",
-    "accountId": "0def35b4-2eb7-4d4e-8a62-5e0f493d39d4"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:jslyemath/mat-106-bank.git&quot;,
+    &quot;accountId&quot;: &quot;0def35b4-2eb7-4d4e-8a62-5e0f493d39d4&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -62,6 +60,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "LaTeX.Skill Checkpoint 8_26.executor": "Run",
     "LaTeX.W1_template.executor": "Run",
+    "LaTeX.W3 v41757.executor": "Run",
     "Python.D1_generator.executor": "Run",
     "Python.D2_generator.executor": "Run",
     "Python.D3_generator.executor": "Run",
@@ -85,7 +84,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/slye/PycharmProjects/localCheckIt/TeX Files (Generated)",
+    "last_opened_file_path": "C:/Users/slye/PycharmProjects/localCheckIt",
     "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable"
   }
 }]]></component>
@@ -165,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725980040762</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added example of bat file">
+      <option name="closed" value="true" />
+      <created>1725985293372</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1725985293375</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -177,6 +184,7 @@
     <MESSAGE value="Fully set up framework. Awaiting modifications for certain local versions." />
     <MESSAGE value="Added README" />
     <MESSAGE value="Updated gitignore file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated gitignore file" />
+    <MESSAGE value="Added example of bat file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added example of bat file" />
   </component>
 </project>
