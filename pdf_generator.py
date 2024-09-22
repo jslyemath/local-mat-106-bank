@@ -316,7 +316,7 @@ main_document = beginning + student_text + ending
 beginning, ending = main_document.split('% Keys')
 main_document = beginning + key_text + ending
 
-pdf = build_pdf(main_document, texinputs=[str(tex_files_dir), ''])
+pdf = build_pdf(main_document, texinputs=[str(tex_files_dir), str(main_dir), ''])
 pdf.save_to(pdf_path)
 
 main_document = main_document.replace(f'{tex_files_dir.stem}/', '')
