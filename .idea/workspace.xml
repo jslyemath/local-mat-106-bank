@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191d7f21-d991-424c-8a87-18cf4d1c7dd8" name="Changes" comment="Created assets file. Started G1 template.">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="191d7f21-d991-424c-8a87-18cf4d1c7dd8" name="Changes" comment="Completed G1 up to progress point 1. Updated pdf_generator.py to include main directory when running build_pdf in order to correctly find the assets directory. Current implementation breaks direct re-compilation with pdflatex.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G1_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/G1_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/G1_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/G1_template.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/main_template.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G2_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/G2_template.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/W5_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/W5_template.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/W6_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/W6_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/W6_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/W6_template.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,41 +59,41 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "LaTeX.G1_template.executor": "Run",
-    "LaTeX.Skill Checkpoint 8_26.executor": "Run",
-    "LaTeX.W1_template.executor": "Run",
-    "LaTeX.W3 v41757.executor": "Run",
-    "Python.D1_generator.executor": "Run",
-    "Python.D2_generator.executor": "Run",
-    "Python.D3_generator.executor": "Run",
-    "Python.F1_generator.executor": "Run",
-    "Python.F2_generator.executor": "Run",
-    "Python.F3_generator.executor": "Run",
-    "Python.F4_generator.executor": "Run",
-    "Python.G1_generator.executor": "Run",
-    "Python.G2_generator.executor": "Run",
-    "Python.N1_generator.executor": "Run",
-    "Python.N2_generator.executor": "Run",
-    "Python.N3_generator.executor": "Run",
-    "Python.N4_generator.executor": "Run",
-    "Python.W1_generator.executor": "Run",
-    "Python.W2_generator.executor": "Run",
-    "Python.W3_generator.executor": "Run",
-    "Python.W4_generator.executor": "Run",
-    "Python.W5_generator.executor": "Run",
-    "Python.W6_generator.executor": "Run",
-    "Python.pdf_generator.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "full.screen.before.presentation.mode": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/slye/PycharmProjects/localCheckIt",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;LaTeX.G1_template.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.Skill Checkpoint 8_26.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.W1_template.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.W3 v41757.executor&quot;: &quot;Run&quot;,
+    &quot;Python.D1_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.D2_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.D3_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.F1_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.F2_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.F3_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.F4_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.G1_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.G2_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.N1_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.N2_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.N3_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.N4_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.W1_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.W2_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.W3_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.W4_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.W5_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.W6_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pdf_generator.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/slye/PycharmProjects/FundCheck&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\slye\PycharmProjects\localCheckIt\assets\G1" />
@@ -211,7 +211,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726784209644</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Completed G1 up to progress point 1. Updated pdf_generator.py to include main directory when running build_pdf in order to correctly find the assets directory. Current implementation breaks direct re-compilation with pdflatex.">
+      <option name="closed" value="true" />
+      <created>1727027419267</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1727027419267</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Completed G1 up to progress point 1. Updated pdf_generator.py to include main directory when running build_pdf in order to correctly find the assets directory. Current implementation breaks direct re-compilation with pdflatex.">
+      <option name="closed" value="true" />
+      <created>1727027474538</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1727027474538</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -228,6 +244,7 @@
     <MESSAGE value="Updated the definition of \setname in skillcheckpoints.sty to make for better bookmarks in the outputted PDF." />
     <MESSAGE value="Hotfix for W2 when before progress point 1. Desperately needs refactored at some point." />
     <MESSAGE value="Created assets file. Started G1 template." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created assets file. Started G1 template." />
+    <MESSAGE value="Completed G1 up to progress point 1. Updated pdf_generator.py to include main directory when running build_pdf in order to correctly find the assets directory. Current implementation breaks direct re-compilation with pdflatex." />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed G1 up to progress point 1. Updated pdf_generator.py to include main directory when running build_pdf in order to correctly find the assets directory. Current implementation breaks direct re-compilation with pdflatex." />
   </component>
 </project>
