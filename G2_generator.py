@@ -4,6 +4,8 @@ from fractions import Fraction
 
 
 def generate(**kwargs):
+    course_progress = int(kwargs['course_progress'])
+
     def contractor_selection():
         person = sm.random_person()
         contractor1_rate = random.randint(50, 80)
@@ -181,8 +183,23 @@ def generate(**kwargs):
 
         return problem, solution
 
-    prob_sol_function = random.choice([contractor_selection, cookie_stand, christmas_decorations,
-                                       walking_distance, can_production, buying_house])
+    # Lists of problem generator functions, split up by course progress cutoff points.
+
+    beginning_0 = []
+    sub_whole_1 = []
+    mult_div_whole_2 = [contractor_selection, cookie_stand, can_production, buying_house]
+    int_pemdas_3 = []
+    add_sub_frac_4 = [christmas_decorations, walking_distance]
+    mult_div_frac_5 = []
+
+    versions_lists = [beginning_0, sub_whole_1, mult_div_whole_2, int_pemdas_3, add_sub_frac_4, mult_div_frac_5]
+
+    def get_available_versions(n):
+        return sum(versions_lists[:n + 1], [])
+
+    available_versions = get_available_versions(course_progress)
+
+    prob_sol_function = random.choice(available_versions)
 
     problem, solution = prob_sol_function()
 
