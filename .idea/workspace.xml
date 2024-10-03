@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191d7f21-d991-424c-8a87-18cf4d1c7dd8" name="Changes" comment="Completed G1 up to progress point 1. Updated pdf_generator.py to include main directory when running build_pdf in order to correctly find the assets directory. Current implementation breaks direct re-compilation with pdflatex.">
+    <list default="true" id="191d7f21-d991-424c-8a87-18cf4d1c7dd8" name="Changes" comment="Fixed oversight of G2 not connecting to course progress point.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G1_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/G1_template.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G2_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/G2_template.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G2_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/G2_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/W5_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/W5_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/W5_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/W5_template.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/W6_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/W6_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/W6_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/W6_template.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +60,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
     &quot;LaTeX.G1_template.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.Skill Checkpoint 8_26.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.W1_template.executor&quot;: &quot;Run&quot;,
@@ -90,7 +89,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/slye/PycharmProjects/FundCheck&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/slye/PycharmProjects/localCheckIt&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
 }</component>
@@ -227,7 +226,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727027474538</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added G2, W5, W6. Fixed small formatting error on G1.">
+      <option name="closed" value="true" />
+      <created>1727382394648</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1727382394648</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Fixed oversight of G2 not connecting to course progress point.">
+      <option name="closed" value="true" />
+      <created>1727461656059</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1727461656059</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -245,6 +260,8 @@
     <MESSAGE value="Hotfix for W2 when before progress point 1. Desperately needs refactored at some point." />
     <MESSAGE value="Created assets file. Started G1 template." />
     <MESSAGE value="Completed G1 up to progress point 1. Updated pdf_generator.py to include main directory when running build_pdf in order to correctly find the assets directory. Current implementation breaks direct re-compilation with pdflatex." />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed G1 up to progress point 1. Updated pdf_generator.py to include main directory when running build_pdf in order to correctly find the assets directory. Current implementation breaks direct re-compilation with pdflatex." />
+    <MESSAGE value="Added G2, W5, W6. Fixed small formatting error on G1." />
+    <MESSAGE value="Fixed oversight of G2 not connecting to course progress point." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed oversight of G2 not connecting to course progress point." />
   </component>
 </project>

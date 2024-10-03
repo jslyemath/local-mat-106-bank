@@ -27,15 +27,15 @@ def generate(**kwargs):
         cost_difference = abs(contractor1_cost - contractor2_cost)
 
         problem = (
-            f"{person.name}'s mom is trying to find a contractor to work on their house. The first contractor charges ${contractor1_rate} per hour. "
-            f"The second contractor charges ${contractor2_rate} per hour, but {person.name}'s mom found a special deal online which will deduct ${discount} from the total bill. "
+            f"{person.name}'s mom is trying to find a contractor to work on their house. The first contractor charges \\${contractor1_rate} per hour. "
+            f"The second contractor charges \\${contractor2_rate} per hour, but {person.name}'s mom found a special deal online which will deduct \\${discount} from the total bill. "
             f"If {person.poss_adjective()} mom needs the chosen contractor to work for {hours} hours, how will the potential bills compare? Which contractor is the better deal?")
 
         solution = (
             f"To find the total cost for each contractor, we multiply the hourly rate by the number of hours needed. "
-            f"The total cost for the first contractor is ${contractor1_rate} per hour multiplied by {hours} hours, which equals ${contractor1_cost}. "
-            f"The total cost for the second contractor is ${contractor2_rate} per hour multiplied by {hours} hours minus the ${discount} discount, which equals ${contractor2_cost}. "
-            f"Therefore, the total bill will be ${cost_difference} more if they choose the {higher_contractor} contractor. "
+            f"The total cost for the first contractor is \\${contractor1_rate} per hour multiplied by {hours} hours, which equals \\${contractor1_cost}. "
+            f"The total cost for the second contractor is \\${contractor2_rate} per hour multiplied by {hours} hours minus the \\${discount} discount, which equals \\${contractor2_cost}. "
+            f"Therefore, the total bill will be \\${cost_difference} more if they choose the {higher_contractor} contractor. "
             f"{person.name} and {person.poss_adjective()} mom should higher the {lower_contractor} contractor.")
 
         return problem, solution
@@ -172,14 +172,14 @@ def generate(**kwargs):
         final_payment = remaining_amount % monthly_payments
 
         problem = (
-            f"{person.name}'s family is buying a new house. The agreed-upon price for the house at the time of closing is ${house_price:,}. "
-            f"The bank requires an immediate down payment of ${down_payment:,}. The remaining amount will be paid over {monthly_payments:,} equal monthly payments, plus one more month for any remaining balance. "
+            f"{person.name}'s family is buying a new house. The agreed-upon price for the house at the time of closing is \\${house_price:,}. "
+            f"The bank requires an immediate down payment of \\${down_payment:,}. The remaining amount will be paid over {monthly_payments:,} equal monthly payments, plus one more month for any remaining balance. "
             f"Assuming there is no interest involved, how much will {person.name}'s family be paying each month? Don't forget to mention the final month, in case there was a remaining balance.")
 
         solution = (
             f"To find out how much {person.name}'s family will need to pay each month, we first subtract the down payment from the house price to find the remaining amount. "
-            f"${house_price:,} minus ${down_payment:,} equals ${remaining_amount:,}. Dividing this by {monthly_payments:,} monthly payments, we get ${monthly_payment_amount:,} per month. "
-            f"Therefore, {person.name}'s family will need to pay ${monthly_payment_amount:,} each month for {monthly_payments} months, followed by a final payment of ${final_payment:,}.")
+            f"\\${house_price:,} minus \\${down_payment:,} equals \\${remaining_amount:,}. Dividing this by {monthly_payments:,} monthly payments, we get \\${monthly_payment_amount:,} per month. "
+            f"Therefore, {person.name}'s family will need to pay \\${monthly_payment_amount:,} each month for {monthly_payments} months, followed by a final payment of \\${final_payment:,}.")
 
         return problem, solution
 
@@ -208,4 +208,3 @@ def generate(**kwargs):
         'solution': solution,
     }
 
-print(generate())

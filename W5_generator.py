@@ -22,11 +22,11 @@ def generate(**kwargs):
     lattice_pv1 = random.choice([3, 4])
     lattice_pv2 = random.choice(list(range(2, lattice_pv1)))
 
-    partial_sums_pv1 = random.choice([2, 3, 4])
-    partial_sums_pv2 = 2 if partial_sums_pv1 == 2 else random.choice(list(range(2, max(3, partial_sums_pv1))))
+    partial_products_pv1 = random.choice([2, 3, 4])
+    partial_products_pv2 = 2 if partial_products_pv1 == 4 else random.choice(list(range(2, max(3, partial_products_pv1))))
 
     mult_alg_vars = [('Lattice', lattice_pv1, lattice_pv2),
-                     ('Partial Sums', partial_sums_pv1, partial_sums_pv2)]
+                     ('Partial Products', partial_products_pv1, partial_products_pv2)]
 
     random.shuffle(mult_alg_vars)
 
