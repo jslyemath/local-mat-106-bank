@@ -81,6 +81,7 @@ def get_named_range(array_data, name, direction=None, height=None, width=None):
     range_2d = []
     for r in range(start_row, start_row + height):
         row_data = array_data[r][start_col:start_col + width]
+        row_data = [x for x in row_data if x != '']
         range_2d.append(row_data)
 
     return range_2d
@@ -246,7 +247,7 @@ else:
     for variant in variants:
         variant_dict[variant] = seeds[0]
 
-chosen_skills_array = get_named_range(full_choices_array, '1:', direction='below')
+chosen_skills_array = get_named_range(full_choices_array, '1:', direction='below', width=100)
 chosen_skills = list({sk for row in chosen_skills_array for sk in row})
 
 # create a jinja2 environment with latex-compatible markup and instantiate a template
