@@ -266,5 +266,11 @@ def generate(**kwargs):
         'p7_prob': prob_ans[6][0],
         'p7_ans': prob_ans[6][1],
         'p8_prob': prob_ans[7][0],
-        'p8_ans': prob_ans[7][1]
+        'p8_ans': prob_ans[7][1],
+        'explain_prob_1': explain_prob_1,
+        'explain_ans_1': explain_ans_1,
+        'explain_prob_2': explain_prob_2,
+        'explain_ans_2': explain_ans_2,
+        'explain_prob_3': explain_prob_3,
+        'explain_ans_3': explain_ans_3,
     }

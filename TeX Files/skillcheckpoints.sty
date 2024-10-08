@@ -72,7 +72,21 @@
 \newenvironment{ansenv}{\ifthenelse{\boolean{anstoggle}}{\color{scCOLOR}}{\expandafter\comment}}{\ifthenelse{\boolean{anstoggle}}{}{\expandafter\endcomment}}
 
 % Custom format for T/F questions
-\newcommand{\tfleft}[1]{\textbf{TRUE}\hspace{5pt} / \hspace{5pt}\textbf{FALSE} \hspace{7pt}  \begin{minipage}[t]{.72\textwidth} #1\end{minipage}}
+%\newcommand{\tfleft}[1]{\textbf{TRUE}\hspace{5pt} / \hspace{5pt}\textbf{FALSE} \hspace{7pt}  \begin{minipage}[t]{.72\textwidth} #1\end{minipage}}
+\NewDocumentCommand{\tfleft}{o m}{% #1 is the optional answer ("True" or "False"), #2 is the statement
+    \textbf{%
+        \ifthenelse{\boolean{anstoggle} \AND \equal{\IfNoValueTF{#1}{dummy}{#1}}{True}}%
+            {\fcolorbox{blue}{white}{TRUE}}{TRUE}%
+    }
+    \hspace{5pt} / \hspace{5pt}
+    \textbf{%
+        \ifthenelse{\boolean{anstoggle} \AND \equal{\IfNoValueTF{#1}{dummy}{#1}}{False}}%
+            {\fcolorbox{blue}{white}{FALSE}}{FALSE}%
+    }
+    \hspace{7pt}
+    \begin{minipage}[t]{.72\textwidth} #2 \end{minipage}%
+}
+
 
 % Custom format for general mini-columns (usually within each enumerate item)
 \NewDocumentCommand{\minicol}{O{.475} O{.475} m m}{%
