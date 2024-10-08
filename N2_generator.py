@@ -43,18 +43,18 @@ def generate(**kwargs):
         if r == 0:
             the_divisor = n
             the_quotient = q
-            quotients_and_remainders += f'{the_number} \\div {n} = {q} \\\\ '
+            quotients_and_remainders += f'{the_number} \\div {n} &= {q} \\\\ '
         else:
-            quotients_and_remainders += f'{the_number} \\div {n} = {q} \\text{{ remainder }} {r} \\\\ '
+            quotients_and_remainders += f'{the_number} \\div {n} &= {q} \\text{{ remainder }} {r} \\\\ '
 
     quotients_and_remainders = quotients_and_remainders.rstrip('\\\\')
 
     if prime_problem:
         answer = (
             f'The number {the_number} is prime according to our test from class. According to the test, we must '
-            f'check if any of the primes less than or equal to √{the_number} can divide {the_number}. Since '
-            f'{primes_to_test[last]}² is less than or equal to {the_number} and '
-            f'{primes_to_test[last + 1]}² is greater than {the_number}, √{the_number} must be '
+            f'check if any of the primes less than or equal to $\\sqrt{{{the_number}}}$ can divide {the_number}. Since '
+            f'${primes_to_test[last]}^2$ is less than or equal to {the_number} and '
+            f'${primes_to_test[last + 1]}^2$ is greater than {the_number}, $\\sqrt{{{the_number}}}$ must be '
             f'between {primes_to_test[last]} and {primes_to_test[last + 1]}. This means we can stop testing at '
             f'{primes_to_test[last]}. We checked to see if any of the primes up to that point divide {the_number} '
             f'evenly. None of them divided {the_number}, as evidenced by the list of quotients and remainders '

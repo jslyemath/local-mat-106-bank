@@ -50,19 +50,19 @@ def generate(**kwargs):
 
         match vocab_mode:
             case 'e':
-                connecting_string = ' \\text{ does not divide } ' if use_not else ' \\text{ divides } '
+                connecting_string = ' does not divide ' if use_not else ' divides '
             case 'o':
-                connecting_string = ' \\text{ is not a divisor of } ' if use_not else ' \\text{ is a divisor of } '
+                connecting_string = ' is not a divisor of ' if use_not else ' is a divisor of '
             case 'f':
-                connecting_string = ' \\text{ is not a factor of } ' if use_not else ' \\text{ is a factor of } '
+                connecting_string = ' is not a factor of ' if use_not else ' is a factor of '
             case 'm':
-                connecting_string = ' \\text{ is not a multiple of } ' if use_not else ' \\text{ is a multiple of } '
+                connecting_string = ' is not a multiple of ' if use_not else ' is a multiple of '
                 a, b = b, a
 
         if not default_order:
             a, b = b, a
 
-        prob = f'{a} {connecting_string} {b}'
+        prob = f'${a}$ {connecting_string} ${b}$'
         return prob
 
     vars = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'm', 'n',
@@ -96,19 +96,19 @@ def generate(**kwargs):
         match ver:
             case 'does divide':
                 if second_variable:
-                    extra_statement = f' \\text{{ and }}{div_statement(a, c, vocab_mode=vocab)} '
+                    extra_statement = f' and {div_statement(a, c, vocab_mode=vocab)} '
                 else:
                     c = int(random.randint(1, 9)) * a
                     extra_statement = ''
 
-                prob = (f'\\text{{If }} {div_statement(a, b, vocab_mode=vocab)}{extra_statement} \\text{{, then }} '
+                prob = (f'If {div_statement(a, b, vocab_mode=vocab)}{extra_statement} , then  '
                         f'{div_statement(a, f"{b} {op} {c}", vocab_mode=vocab, use_not=not ans)}.')
 
             case 'does not divide':
                 use_nots_hypothesis = [True, False]
                 random.shuffle(use_nots_hypothesis)
                 if second_variable:
-                    extra_statement = (' \\text{ and } '
+                    extra_statement = (' and '
                                        f'{div_statement(a, c, vocab_mode=vocab, use_not=use_nots_hypothesis[1])}')
                 else:
                     if use_nots_hypothesis[0] is True:
@@ -116,8 +116,8 @@ def generate(**kwargs):
                     else:
                         c = random.randint(0, 8) * a + random.randint(1, a - 1)
                     extra_statement = ''
-                prob = (f'\\text{{If }} {div_statement(a, b, vocab_mode=vocab, use_not=use_nots_hypothesis[0])}'
-                        f'{extra_statement} \\text{{, then }} '
+                prob = (f'If {div_statement(a, b, vocab_mode=vocab, use_not=use_nots_hypothesis[0])}'
+                        f'{extra_statement} , then '
                         f'{div_statement(a, f"{b} {op} {c}", vocab_mode=vocab, use_not=ans)}.')
 
         return prob, ver
@@ -162,11 +162,11 @@ def generate(**kwargs):
 
         match ver:
             case 'larger multiple':
-                prob = (f'\\text{{If }} {div_statement(a, b, vocab_mode=vocab, default_order=ans)} \\text{{, then }} '
+                prob = (f'If {div_statement(a, b, vocab_mode=vocab, default_order=ans)} , then '
                         f'{div_statement(a, b_mult, vocab_mode=vocab, default_order=ans)}.')
             case 'smaller factor':
                 prob = (
-                    f'\\text{{If }} {div_statement(b_mult, a, vocab_mode=vocab, default_order=ans)} \\text{{, then }} '
+                    f'If {div_statement(b_mult, a, vocab_mode=vocab, default_order=ans)} , then '
                     f'{div_statement(b, a, vocab_mode=vocab, default_order=ans)}.')
             case 'every-is':
                 match vocab:
@@ -180,10 +180,10 @@ def generate(**kwargs):
                         vocab_statement = 'multiple of'
                         if ans is False:
                             b, b_mult = b_mult, b
-                        prob = f'\\text{{Every }} \\text{{{vocab_statement}}} {b_mult} \\text{{ is a }} \\text{{{vocab_statement}}} \\text{{ }} {b}.'
+                        prob = f'Every {vocab_statement} ${b_mult}$ is a {vocab_statement} ${b}$.'
 
                 if vocab in ['o', 'e', 'f']:
-                    prob = f'\\text{{Every }} \\text{{{vocab_statement}}} {b} \\text{{ is a }} \\text{{{vocab_statement}}} \\text{{ }} {b_mult}.'
+                    prob = f'Every {vocab_statement} ${b}$ is a {vocab_statement} ${b_mult}$.'
         return prob, ver
 
     def sum_false():
@@ -195,9 +195,9 @@ def generate(**kwargs):
         vars.remove(c)
         d = random.choice(vars)
 
-        prob = (f'\\text{{If }} {div_statement(a, c, vocab_mode=vocab, use_not=not_ver)}'
-                f' \\text{{ and }} {div_statement(b, d, vocab_mode=vocab, use_not=not_ver)},'
-                f' \\text{{ then }} {div_statement(f"{a + b}", f"{c} + {d}", vocab_mode=vocab, use_not=not_ver)}.')
+        prob = (f'If {div_statement(a, c, vocab_mode=vocab, use_not=not_ver)}'
+                f' and {div_statement(b, d, vocab_mode=vocab, use_not=not_ver)},'
+                f' then {div_statement(f"{a + b}", f"{c} + {d}", vocab_mode=vocab, use_not=not_ver)}.')
 
         return prob
 
@@ -206,9 +206,9 @@ def generate(**kwargs):
         a = int(random.randint(2, 9))
         a_mult = int(random.randint(2, 6)) * a
         b = random.choice(vars)
-        prob = (f'\\text{{If }} {div_statement(a, b, vocab_mode=vocab)} '
-                f' \\text{{ and }} {div_statement(a_mult, b, vocab_mode=vocab)}, '
-                f' \\text{{ then }} {div_statement(a * a_mult, b, vocab_mode=vocab)}.')
+        prob = (f'If {div_statement(a, b, vocab_mode=vocab)} '
+                f' and {div_statement(a_mult, b, vocab_mode=vocab)}, '
+                f' then {div_statement(a * a_mult, b, vocab_mode=vocab)}.')
         return prob
 
     already_used_mult = []
