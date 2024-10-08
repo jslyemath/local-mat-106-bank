@@ -244,9 +244,9 @@ def generate(**kwargs):
 
     prob_ans = list(zip(problems, answers))
 
-    explain_prob_1, explain_ans_1 = prob_ans[0]
-    explain_prob_2, explain_ans_2 = prob_ans[1]
-    explain_prob_3, explain_ans_3 = prob_ans[2]
+    explain_prob_1, explain_ans_1 = prob_ans[4]
+    explain_prob_2, explain_ans_2 = prob_ans[5]
+    explain_prob_3, explain_ans_3 = prob_ans[6]
 
     random.shuffle(prob_ans)
 

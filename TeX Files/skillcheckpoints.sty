@@ -68,7 +68,7 @@
 \usepackage{ifthen}
 \newboolean{anstoggle}
 \setboolean{anstoggle}{false}
-\newcommand{\ans}[1]{\ifthenelse{\boolean{anstoggle}}{\textcolor{blue}{#1}}{}}
+\newcommand{\ans}[1]{\ifthenelse{\boolean{anstoggle}}{\textcolor{scCOLOR}{#1}}{}}
 \newenvironment{ansenv}{\ifthenelse{\boolean{anstoggle}}{\color{scCOLOR}}{\expandafter\comment}}{\ifthenelse{\boolean{anstoggle}}{}{\expandafter\endcomment}}
 
 % Custom format for T/F questions
@@ -76,12 +76,12 @@
 \NewDocumentCommand{\tfleft}{o m}{% #1 is the optional answer ("True" or "False"), #2 is the statement
     \textbf{%
         \ifthenelse{\boolean{anstoggle} \AND \equal{\IfNoValueTF{#1}{dummy}{#1}}{True}}%
-            {\fcolorbox{blue}{white}{TRUE}}{TRUE}%
+            {\fcolorbox{scCOLOR}{white}{TRUE}}{TRUE}%
     }
     \hspace{5pt} / \hspace{5pt}
     \textbf{%
         \ifthenelse{\boolean{anstoggle} \AND \equal{\IfNoValueTF{#1}{dummy}{#1}}{False}}%
-            {\fcolorbox{blue}{white}{FALSE}}{FALSE}%
+            {\fcolorbox{scCOLOR}{white}{FALSE}}{FALSE}%
     }
     \hspace{7pt}
     \begin{minipage}[t]{.72\textwidth} #2 \end{minipage}%
