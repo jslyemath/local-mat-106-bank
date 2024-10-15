@@ -3,10 +3,64 @@ import math
 from fractions import Fraction
 from decimal import Decimal
 from typing import Any, List
+import re
+from datetime import datetime, timedelta
 
 
 def main():
     pass
+
+
+def normalize_time_str(time_str):
+    """Normalize time string to a consistent format (e.g., 8:00 AM or 23:00 for 24-hour)."""
+    time_str = time_str.strip().lower()
+
+    # Check if the input is a 24-hour format like '23:00' or '09:30'
+    if re.match(r'^\d{1,2}:\d{2}$', time_str):  # Matches '23:00', '09:30', etc.
+        return time_str
+
+    # Handle variations like '8p', '8pm' by inserting ':00'
+    if re.match(r'^\d{1,2}[ap]m?$', time_str):  # Matches '8pm', '8p', '12am', etc.
+        time_str = time_str[:-2] + ":00" + time_str[-2:]
+
+    # Ensure there's a space between the time and 'am'/'pm'
+    time_str = re.sub(r'(\d)(am|pm)', r'\1 \2', time_str)
+
+    return time_str.upper()
+
+
+def is_24_hour_format(time_str):
+    """Check if the time string is in 24-hour format."""
+    return re.match(r'^\d{1,2}:\d{2}$', time_str)
+
+
+def convert_to_24_hour(time_str):
+    """Converts various time string formats (12-hour or 24-hour) to a 24-hour time."""
+    normalized_time_str = normalize_time_str(time_str)
+
+    # If already in 24-hour format, just parse it as is
+    if is_24_hour_format(normalized_time_str):
+        return datetime.strptime(normalized_time_str, '%H:%M')
+
+    # Otherwise, it's a 12-hour format, so parse accordingly
+    return datetime.strptime(normalized_time_str, '%I:%M %p')
+
+
+def convert_to_12_hour(time_obj):
+    """Converts a 24-hour datetime object back to a 12-hour time string."""
+    return time_obj.strftime('%I:%M %p')
+
+
+def add_hours(time_str, hours):
+    """Adds or subtracts hours from a given 12-hour or 24-hour formatted time string."""
+    # Convert to datetime object in 24-hour format
+    time_obj = convert_to_24_hour(time_str)
+
+    # Add or subtract hours using timedelta
+    new_time = time_obj + timedelta(hours=hours)
+
+    # Convert back to 12-hour format and return
+    return convert_to_12_hour(new_time)
 
 
 class Person:

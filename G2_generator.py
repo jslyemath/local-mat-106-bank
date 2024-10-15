@@ -1,10 +1,45 @@
 import slye_math as sm
 import random
 from fractions import Fraction
+import inflect
 
 
 def generate(**kwargs):
     course_progress = int(kwargs['course_progress'])
+
+    def travel_to_cabin():
+        person = sm.random_person()
+        rate = random.randint(50, 80)
+        destination = random.choice(['cabin', 'lake house', 'beach house', 'villa', 'cottage'])
+        start_time = random.randint(6, 18)
+        start_time_military = f"{random.randint(6, 18)}:00"
+        start_time_standard = sm.convert_to_12_hour(start_time_military)
+        max_hours = 24 - start_time
+        day_one_hours = random.randint(3, max_hours)
+        day_one_distance = rate * day_one_hours
+        end_time_standard = sm.add_hours(start_time_standard, day_one_hours)
+        day_two_hours = random.randint(2, 10)
+
+        # Create an inflect engine
+        p = inflect.engine()
+
+        # Function to convert integer to words
+        def number_to_words(num):
+            return p.number_to_words(num)
+
+        problem = (
+            f"{person.name}'s family is travelling to their {destination} for vacation. "
+            f"Yesterday, they drove from {start_time_standard} to {end_time_standard}, with no stops until they made it to their hotel for the night. "
+            f"In that time, they drove {day_one_distance} miles. Today {person.name}'s family continues driving at the same average speed for {number_to_words(day_two_hours)} more hours. "
+            f"After all that driving, they finally make it to the {destination}. Overall, between yesterday and today, how many miles did they travel to get to their {destination}?")
+
+        solution = (
+            f"First, we must determine their average speed. That is, we want to find how many miles they travel for each hour of driving. "
+            f"Dividing the first day's distance of {day_one_distance} miles by {day_one_hours} hours gives us {rate} mph. "
+            f"Now we can calculate the number of miles driven on the second day by multiplying {rate} mph by {day_two_hours} hours."
+        )
+
+        return problem, solution
 
     def contractor_selection():
         person = sm.random_person()
@@ -187,7 +222,7 @@ def generate(**kwargs):
 
     beginning_0 = []
     sub_whole_1 = []
-    mult_div_whole_2 = [contractor_selection, cookie_stand, can_production, buying_house]
+    mult_div_whole_2 = [travel_to_cabin] # [contractor_selection, cookie_stand, can_production, buying_house]
     int_pemdas_3 = []
     add_sub_frac_4 = [christmas_decorations, walking_distance]
     mult_div_frac_5 = []

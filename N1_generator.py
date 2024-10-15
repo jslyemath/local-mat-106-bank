@@ -101,7 +101,7 @@ def generate(**kwargs):
                     c = int(random.randint(1, 9)) * a
                     extra_statement = ''
 
-                prob = (f'If {div_statement(a, b, vocab_mode=vocab)}{extra_statement} , then  '
+                prob = (f'If {div_statement(a, b, vocab_mode=vocab)}{extra_statement}, then  '
                         f'{div_statement(a, f"{b} {op} {c}", vocab_mode=vocab, use_not=not ans)}.')
 
             case 'does not divide':
@@ -117,7 +117,7 @@ def generate(**kwargs):
                         c = random.randint(0, 8) * a + random.randint(1, a - 1)
                     extra_statement = ''
                 prob = (f'If {div_statement(a, b, vocab_mode=vocab, use_not=use_nots_hypothesis[0])}'
-                        f'{extra_statement} , then '
+                        f'{extra_statement}, then '
                         f'{div_statement(a, f"{b} {op} {c}", vocab_mode=vocab, use_not=ans)}.')
 
         return prob, ver
@@ -132,6 +132,7 @@ def generate(**kwargs):
             available_versions_weights = [v for k, v in available_versions_dict.items()
                                           if k in available_versions_list]
         ver = random.choices(available_versions_list, available_versions_weights)[0]
+        # ver = 'smaller factor'
 
         vocab = random.choice(['e', 'o', 'f', 'm'])
         a = random.choice(vars)
@@ -146,9 +147,16 @@ def generate(**kwargs):
         swap = random.choice([True, False])
         if swap:
             a, b = b, a
+            print("swapped")
+        else:
+            print("not swapped")
 
         special_case_1 = ver == 'smaller factor' and ans is True and second_variable is False and swap is True
+        if special_case_1:
+            print("special case 1")
         special_case_2 = ver == 'larger multiple' and ans is False and second_variable is False and swap is True
+        if special_case_2:
+            print("special case 2")
 
         if special_case_1 or special_case_2:
             a = random.choice([16, 18, 24, 28, 30, 32, 34, 36, 38, 40, 48])
@@ -162,13 +170,15 @@ def generate(**kwargs):
 
         match ver:
             case 'larger multiple':
-                prob = (f'If {div_statement(a, b, vocab_mode=vocab, default_order=ans)} , then '
+                prob = (f'If {div_statement(a, b, vocab_mode=vocab, default_order=ans)}, then '
                         f'{div_statement(a, b_mult, vocab_mode=vocab, default_order=ans)}.')
             case 'smaller factor':
                 prob = (
-                    f'If {div_statement(b_mult, a, vocab_mode=vocab, default_order=ans)} , then '
+                    f'If {div_statement(b_mult, a, vocab_mode=vocab, default_order=ans)}, then '
                     f'{div_statement(b, a, vocab_mode=vocab, default_order=ans)}.')
             case 'every-is':
+                if ans is False:
+                    b, b_mult = b_mult, b
                 match vocab:
                     case 'o':
                         vocab_statement = 'divisor of'
@@ -178,12 +188,13 @@ def generate(**kwargs):
                         vocab_statement = 'factor of'
                     case 'm':
                         vocab_statement = 'multiple of'
-                        if ans is False:
-                            b, b_mult = b_mult, b
                         prob = f'Every {vocab_statement} ${b_mult}$ is a {vocab_statement} ${b}$.'
 
                 if vocab in ['o', 'e', 'f']:
                     prob = f'Every {vocab_statement} ${b}$ is a {vocab_statement} ${b_mult}$.'
+        print(ver)
+        print(prob)
+        print(ans)
         return prob, ver
 
     def sum_false():
@@ -274,3 +285,5 @@ def generate(**kwargs):
         'explain_prob_3': explain_prob_3,
         'explain_ans_3': explain_ans_3,
     }
+
+# generate()

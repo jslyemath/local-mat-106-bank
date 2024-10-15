@@ -12,7 +12,7 @@ def generate(**kwargs):
 
     beginning_0 = ['add-coladd-1p', 'add-lattice-1p', 'add-mental-1p', 'add-standard-1p', 'add-standard-2p']
     sub_whole_1 = ['sub-standard-1p', 'sub-trades-1p']
-    mult_div_whole_2 = []
+    mult_div_whole_2 = ['mult-lattice-1p', 'mult-partial-1p', 'div-standard-1p']
     int_pemdas_3 = []
     add_sub_frac_4 = []
     mult_div_frac_5 = []
@@ -83,6 +83,33 @@ def generate(**kwargs):
                 'work_math': '3278 - 1352',
                 'work_desc_2': " using the trades first algorithm.",
                 'incorrect': "The student performed all trades, whether or not they were necessary. This resulted in more than 10 in two columns, and they simply placed all the digits next to each other in the final answer.",
+                'thinking': "",
+                'feedback': "",
+            },
+        'mult-lattice-1p':
+            {
+                'work_desc_1': "The student was trying to multiply ",
+                'work_math': '82 \\times 97',
+                'work_desc_2': " using the lattice algorithm.",
+                'incorrect': "",
+                'thinking': "",
+                'feedback': "",
+            },
+        'mult-partial-1p':
+            {
+                'work_desc_1': "The student was trying to multiply ",
+                'work_math': '37 \\times 54',
+                'work_desc_2': " using the partial products algorithm.",
+                'incorrect': "",
+                'thinking': "",
+                'feedback': "",
+            },
+        'div-standard-1p':
+            {
+                'work_desc_1': "The student was trying to divide ",
+                'work_math': '642 \\div 6',
+                'work_desc_2': " using the standard algorithm.",
+                'incorrect': "",
                 'thinking': "",
                 'feedback': "",
             },

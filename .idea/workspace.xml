@@ -4,48 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191d7f21-d991-424c-8a87-18cf4d1c7dd8" name="Changes" comment="Fixed G2. Eliminated line of test code and added correct formatting for $ in the template.">
-      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
+    <list default="true" id="191d7f21-d991-424c-8a87-18cf4d1c7dd8" name="Changes" comment="Local commit for new computer.">
+      <change afterPath="$PROJECT_DIR$/assets/G1/div-standard-1p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/G1/mult-lattice-1p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/G1/mult-partial-1p.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/localCheckIt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/localCheckIt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/D1_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/D1_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/D1_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/D1_template.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/D2_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/D2_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/D3_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/D3_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/F1_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/F1_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/F2_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/F2_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/F3_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/F3_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/F4_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/F4_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/G1_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/G1_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G1_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/G1_template.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/G2_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/G2_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G2_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/G2_template.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/N1_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/N1_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/N2_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/N2_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/N3_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/N3_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/N4_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/N4_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeX Files/Skill Descriptions.tex" beforeDir="false" afterPath="$PROJECT_DIR$/TeX Files/Skill Descriptions.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeX Files/skillcheckpoints.sty" beforeDir="false" afterPath="$PROJECT_DIR$/TeX Files/skillcheckpoints.sty" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/W1_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/W1_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/W1_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/W1_template.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/W2_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/W2_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/W2_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/W2_template.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/W3_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/W3_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/W3_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/W3_template.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/W4_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/W4_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/W4_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/W4_template.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/W5_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/W5_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/W5_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/W5_template.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/W6_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/W6_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/W6_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/W6_template.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/main_template.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_pdf_generator.bat" beforeDir="false" afterPath="$PROJECT_DIR$/run_pdf_generator.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/slye_math.py" beforeDir="false" afterPath="$PROJECT_DIR$/slye_math.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,12 +38,12 @@
     &quot;assignee&quot;: &quot;jslyemath&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/jslyemath/local-mat-106-bank",
-    "accountId": "ac3efa64-f38a-47ef-89a8-33ba556a600a"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jslyemath/local-mat-106-bank&quot;,
+    &quot;accountId&quot;: &quot;ac3efa64-f38a-47ef-89a8-33ba556a600a&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -126,12 +95,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "full.screen.before.presentation.mode": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/slye/Projects/localCheckIt",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+    "last_opened_file_path": "C:/Users/slye/Projects/localCheckIt/assets/G1",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\slye\Projects\localCheckIt\assets\G1" />
       <recent name="C:\Users\slye\PycharmProjects\localCheckIt\assets\G1" />
       <recent name="C:\Users\slye\PycharmProjects\localCheckIt\TeX Files (Generated)" />
       <recent name="C:\Users\slye\PycharmProjects\localCheckIt" />
@@ -287,11 +257,30 @@
       <option name="project" value="LOCAL" />
       <updated>1727976516849</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Local commit for new computer.">
+      <option name="closed" value="true" />
+      <created>1728993775971</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1728993775971</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -308,6 +297,7 @@
     <MESSAGE value="Added G2, W5, W6. Fixed small formatting error on G1." />
     <MESSAGE value="Fixed oversight of G2 not connecting to course progress point." />
     <MESSAGE value="Fixed G2. Eliminated line of test code and added correct formatting for $ in the template." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed G2. Eliminated line of test code and added correct formatting for $ in the template." />
+    <MESSAGE value="Local commit for new computer." />
+    <option name="LAST_COMMIT_MESSAGE" value="Local commit for new computer." />
   </component>
 </project>
