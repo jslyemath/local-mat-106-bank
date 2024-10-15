@@ -131,8 +131,8 @@ def generate(**kwargs):
             available_versions_list = [x for x in available_versions_dict.keys() if x not in already_used]
             available_versions_weights = [v for k, v in available_versions_dict.items()
                                           if k in available_versions_list]
-        ver = random.choices(available_versions_list, available_versions_weights)[0]
-        # ver = 'smaller factor'
+        # ver = random.choices(available_versions_list, available_versions_weights)[0]
+        ver = 'smaller factor'
 
         vocab = random.choice(['e', 'o', 'f', 'm'])
         a = random.choice(vars)
@@ -147,25 +147,26 @@ def generate(**kwargs):
         swap = random.choice([True, False])
         if swap:
             a, b = b, a
-            print("swapped")
-        else:
-            print("not swapped")
 
-        special_case_1 = ver == 'smaller factor' and ans is True and second_variable is False and swap is True
-        if special_case_1:
-            print("special case 1")
-        special_case_2 = ver == 'larger multiple' and ans is False and second_variable is False and swap is True
-        if special_case_2:
-            print("special case 2")
+        # By other properties dealing with prime divisors, the usual way of handling construction may
+        # break in the following cases. We account for this by changing the setup slightly in these cases.
+        special_case_1 = ver == 'smaller factor' and ans is False and second_variable is False and swap is True
+        special_case_2 = ver == 'smaller factor' and ans is True and second_variable is False and swap is True
+        special_case_3 = ver == 'larger multiple' and ans is False and second_variable is False and swap is True
 
-        if special_case_1 or special_case_2:
-            a = random.choice([16, 18, 24, 28, 30, 32, 34, 36, 38, 40, 48])
+        if special_case_1 or special_case_2 or special_case_3:
+            if special_case_1:
+                lots_of_factors = [6, 8, 12, 16, 18, 20]
+            else:
+                lots_of_factors = [16, 18, 20, 24, 28, 30, 32, 36, 40, 48]
+            a = random.choice(lots_of_factors)
             multipliers = sm.divisors(a)
             multipliers.remove(1)
             multipliers.remove(a)
             multiplier = random.choice(multipliers)
         else:
             multiplier = int(random.randint(2, 9))
+
         b_mult = flex_mult(b, multiplier)
 
         match ver:
@@ -192,9 +193,6 @@ def generate(**kwargs):
 
                 if vocab in ['o', 'e', 'f']:
                     prob = f'Every {vocab_statement} ${b}$ is a {vocab_statement} ${b_mult}$.'
-        print(ver)
-        print(prob)
-        print(ans)
         return prob, ver
 
     def sum_false():
@@ -286,4 +284,4 @@ def generate(**kwargs):
         'explain_ans_3': explain_ans_3,
     }
 
-# generate()
+generate()
