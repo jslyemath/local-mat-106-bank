@@ -2,6 +2,7 @@ import slye_math as sm
 import random
 from fractions import Fraction
 import inflect
+from datetime import datetime
 
 
 def generate(**kwargs):
@@ -12,7 +13,7 @@ def generate(**kwargs):
         rate = random.randint(50, 80)
         destination = random.choice(['cabin', 'lake house', 'beach house', 'villa', 'cottage'])
         start_time = random.randint(6, 18)
-        start_time_military = f"{random.randint(6, 18)}:00"
+        start_time_military = datetime.strptime(f"{start_time}:00", "%H:%M")
         start_time_standard = sm.convert_to_12_hour(start_time_military)
         max_hours = 24 - start_time
         day_one_hours = random.randint(3, max_hours)

@@ -104,6 +104,24 @@ def generate(**kwargs):
                 'thinking': "",
                 'feedback': "",
             },
+        'mult-standard-1p':
+            {
+                'work_desc_1': "The student was trying to multiply ",
+                'work_math': '1324 \\times 9',
+                'work_desc_2': " using the standard algorithm.",
+                'incorrect': "",
+                'thinking': "",
+                'feedback': "",
+            },
+        'div-scaffold-1p':
+            {
+                'work_desc_1': "The student was trying to divide ",
+                'work_math': '4251 \\div 12',
+                'work_desc_2': " using the scaffold algorithm.",
+                'incorrect': "",
+                'thinking': "",
+                'feedback': "",
+            },
         'div-standard-1p':
             {
                 'work_desc_1': "The student was trying to divide ",

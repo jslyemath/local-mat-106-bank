@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191d7f21-d991-424c-8a87-18cf4d1c7dd8" name="Changes" comment="Local commit for new computer.">
-      <change afterPath="$PROJECT_DIR$/assets/G1/div-standard-1p.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/G1/mult-lattice-1p.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/G1/mult-partial-1p.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/localCheckIt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/localCheckIt.iml" afterDir="false" />
+    <list default="true" id="191d7f21-d991-424c-8a87-18cf4d1c7dd8" name="Changes" comment="Added a word problem to G2. Added three problems to G1. Fixed every-is bug in N1. Still working on smaller factor bug in N1. Added simple time functionality for word problems to slye_math.py">
+      <change afterPath="$PROJECT_DIR$/assets/G1/div-scaffold-1p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/G1/mult-standard-1p.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/G1_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/G1_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/G2_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/G2_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/N1_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/N1_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slye_math.py" beforeDir="false" afterPath="$PROJECT_DIR$/slye_math.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728993775971</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added a word problem to G2. Added three problems to G1. Fixed every-is bug in N1. Still working on smaller factor bug in N1. Added simple time functionality for word problems to slye_math.py">
+      <option name="closed" value="true" />
+      <created>1729021049327</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1729021049327</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -298,6 +301,7 @@
     <MESSAGE value="Fixed oversight of G2 not connecting to course progress point." />
     <MESSAGE value="Fixed G2. Eliminated line of test code and added correct formatting for $ in the template." />
     <MESSAGE value="Local commit for new computer." />
-    <option name="LAST_COMMIT_MESSAGE" value="Local commit for new computer." />
+    <MESSAGE value="Added a word problem to G2. Added three problems to G1. Fixed every-is bug in N1. Still working on smaller factor bug in N1. Added simple time functionality for word problems to slye_math.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a word problem to G2. Added three problems to G1. Fixed every-is bug in N1. Still working on smaller factor bug in N1. Added simple time functionality for word problems to slye_math.py" />
   </component>
 </project>
