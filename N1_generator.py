@@ -283,5 +283,3 @@ def generate(**kwargs):
         'explain_prob_3': explain_prob_3,
         'explain_ans_3': explain_ans_3,
     }
-
-generate()

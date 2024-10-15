@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="191d7f21-d991-424c-8a87-18cf4d1c7dd8" name="Changes" comment="Added a word problem to G2. Added three problems to G1. Fixed every-is bug in N1. Still working on smaller factor bug in N1. Added simple time functionality for word problems to slye_math.py">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="191d7f21-d991-424c-8a87-18cf4d1c7dd8" name="Changes" comment="I believed I've fixed all bugs in N1. Also made carrying more likely in W2 by increasing xmore_likely to 5.">
       <change beforePath="$PROJECT_DIR$/N1_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/N1_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/W2_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/W2_generator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729025065707</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="I believed I've fixed all bugs in N1. Also made carrying more likely in W2 by increasing xmore_likely to 5.">
+      <option name="closed" value="true" />
+      <created>1729034575334</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1729034575334</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -308,6 +314,7 @@
     <MESSAGE value="Fixed G2. Eliminated line of test code and added correct formatting for $ in the template." />
     <MESSAGE value="Local commit for new computer." />
     <MESSAGE value="Added a word problem to G2. Added three problems to G1. Fixed every-is bug in N1. Still working on smaller factor bug in N1. Added simple time functionality for word problems to slye_math.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a word problem to G2. Added three problems to G1. Fixed every-is bug in N1. Still working on smaller factor bug in N1. Added simple time functionality for word problems to slye_math.py" />
+    <MESSAGE value="I believed I've fixed all bugs in N1. Also made carrying more likely in W2 by increasing xmore_likely to 5." />
+    <option name="LAST_COMMIT_MESSAGE" value="I believed I've fixed all bugs in N1. Also made carrying more likely in W2 by increasing xmore_likely to 5." />
   </component>
 </project>
