@@ -131,8 +131,7 @@ def generate(**kwargs):
             available_versions_list = [x for x in available_versions_dict.keys() if x not in already_used]
             available_versions_weights = [v for k, v in available_versions_dict.items()
                                           if k in available_versions_list]
-        # ver = random.choices(available_versions_list, available_versions_weights)[0]
-        ver = 'smaller factor'
+        ver = random.choices(available_versions_list, available_versions_weights)[0]
 
         vocab = random.choice(['e', 'o', 'f', 'm'])
         a = random.choice(vars)

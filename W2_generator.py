@@ -20,7 +20,7 @@ def generate(**kwargs):
     base_b_ss = base_names[base_b_base]
     base_ten_op = random.choice(('+', '-')) if sub_allowed else '+'
     base_b_op = '+'
-    xmore_likely = 5
+    xmore_likely = 6
     sub_match_counter = 0
     bt_n1_wts = {'wt_0': 0.0, 'wt_1': 0.0, 'wt_2': 0.0, 'wt_3': 0.0, 'wt_4': 0.0,
                  'wt_5': 0.0, 'wt_6': 0.0, 'wt_7': 0.0, 'wt_8': 0.0, 'wt_9': 0.0}

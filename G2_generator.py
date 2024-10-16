@@ -31,8 +31,8 @@ def generate(**kwargs):
         problem = (
             f"{person.name}'s family is travelling to their {destination} for vacation. "
             f"Yesterday, they drove from {start_time_standard} to {end_time_standard}, with no stops until they made it to their hotel for the night. "
-            f"In that time, they drove {day_one_distance} miles. Today {person.name}'s family continues driving at the same average speed for {number_to_words(day_two_hours)} more hours. "
-            f"After all that driving, they finally make it to the {destination}. Overall, between yesterday and today, how many miles did they travel to get to their {destination}?")
+            f"In that time, they drove {day_one_distance} miles. Today {person.name}'s family continued driving at the same average speed for {number_to_words(day_two_hours)} more hours, after which they arrived at the {destination}. "
+            f"During the past two days, how many miles did they travel to get to their {destination}?")
 
         solution = (
             f"First, we must determine their average speed. That is, we want to find how many miles they travel for each hour of driving. "
