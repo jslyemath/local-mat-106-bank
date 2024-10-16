@@ -10,4 +10,7 @@
 
 /assets/G1/used_versions.json
 
-/.idea
+# Ignore PyCharm IDE files
+.idea/
+*.iml
+workspace.xml
