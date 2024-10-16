@@ -37,7 +37,8 @@ def generate(**kwargs):
         solution = (
             f"First, we must determine their average speed. That is, we want to find how many miles they travel for each hour of driving. "
             f"Dividing the first day's distance of {day_one_distance} miles by {day_one_hours} hours gives us {rate} mph. "
-            f"Now we can calculate the number of miles driven on the second day by multiplying {rate} mph by {day_two_hours} hours."
+            f"Now we can calculate the number of miles driven on the second day by multiplying {rate} mph by {day_two_hours} hours, "
+            f"yielding {rate * day_two_hours} miles. Finally, adding together both distances gives a total of {day_one_distance + rate * day_two_hours} miles."
         )
 
         return problem, solution

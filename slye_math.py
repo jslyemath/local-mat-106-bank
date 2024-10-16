@@ -48,7 +48,7 @@ def convert_to_24_hour(time_str):
 
 def convert_to_12_hour(time_obj):
     """Converts a 24-hour datetime object back to a 12-hour time string."""
-    return time_obj.strftime('%I:%M %p')
+    return time_obj.strftime('%I:%M %p').lstrip('0')
 
 
 def add_hours(time_str, hours):
