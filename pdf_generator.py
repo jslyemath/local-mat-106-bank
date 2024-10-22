@@ -132,6 +132,7 @@ semester = get_named_value(data, 'Semester:', 'right')
 professor = get_named_value(data, 'Professor:', 'right')
 course_progress_raw = get_named_value(data, 'G1, G2, W3, W4, F4:', 'below')
 w6_allow_terminating_raw = get_named_value(data, 'W6:', 'below')
+n3_n4_force_listing_method_raw = get_named_value(data, 'N3, N4:', 'below')
 d2_allow_repeating_raw = get_named_value(data, 'D2:', 'below')
 full_title = f'{title} {date}'
 
@@ -216,8 +217,10 @@ if 'default'.casefold() not in pdf_location_raw.casefold():
 course_progress = int(course_progress_raw[0])
 w6_allow_terminating = True if w6_allow_terminating_raw.casefold() == 'TRUE'.casefold() else False
 d2_allow_repeating = True if d2_allow_repeating_raw.casefold() == 'TRUE'.casefold() else False
+n3_n4_force_listing_method = True if n3_n4_force_listing_method_raw.casefold() == 'TRUE'.casefold() else False
 settings = {k: v for k, v in locals().items() if k in ['course_progress',
                                                        'w6_allow_terminating',
+                                                       'n3_n4_force_listing_method',
                                                        'd2_allow_repeating']}
 
 full_choices_array = get_named_range(data, 'Full Name:')
@@ -301,13 +304,14 @@ for row in full_choices_array[1:]:
     student_text += '\n'
 
 # Build answer key versions
+sorted_used_versions = sorted(list(used_versions), key=lambda x: (skills.index(x[:2]), x))
 key_name = 'Key'
 key_section = 'Blank'
 key_text = ('\\setboolean{anstoggle}{true}\n'
             f'\\setname{{{key_name}}}\n'
             f'\\setsect{{{key_section}}}\n')
 if int(key_amount) > 0:
-    for used_version in used_versions:
+    for used_version in sorted_used_versions:
         key_text += f'\\skillpage{{{used_version}}}\n'
     key_text += key_text*(int(key_amount) - 1)
 

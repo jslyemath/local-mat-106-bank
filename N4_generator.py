@@ -3,6 +3,9 @@ import random
 
 
 def generate(**kwargs):
+    force_listing = False
+    if kwargs['n3_n4_force_listing_method']:
+        force_listing = True
     # Part (a): Listing method
 
     rel_prime_dict = {
@@ -129,10 +132,16 @@ def generate(**kwargs):
     factorization_prob = f'\\text{{LCM}}({factorization_a},{factorization_b})'
     factorization_lcm = math.lcm(a, b)
 
+    if force_listing:
+        listing_prob_wording = "using the listing method (sometimes called the set intersection method). You must show correct lists and a final answer."
+    else:
+        listing_prob_wording = "using a method of your choice \\textbf{other than} the prime factorization method. You must show your work before giving the final answer."
+
     return {
         'listing_a': listing_a,
         'listing_b': listing_b,
         'listing_prob': listing_prob,
+        'listing_prob_wording': listing_prob_wording,
         'listing_list_a': listing_list_a,
         'listing_list_b': listing_list_b,
         'listing_lcm': listing_lcm,
