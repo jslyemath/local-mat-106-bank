@@ -6,7 +6,63 @@ from datetime import datetime
 
 
 def generate(**kwargs):
-    course_progress = int(kwargs['course_progress'])
+    course_progress = 3 # int(kwargs['course_progress'])
+
+    def temperature_change():
+        season = random.choice(['fall', 'winter'])
+        start_time = random.randint(0, 2)
+        time_1 = sm.add_hours(start_time, random.randint(2,7))
+        time_2 = sm.add_hours(time_1, random.randint(2,7))
+        time_3 = sm.add_hours(time_2, random.randint(2,7))
+
+        start_temp = random.randint(-10, -1)
+        fell_rose_2 = random.choice(['fell', 'rose'])
+        if fell_rose_2 == 'fell':
+            fell_rose_sign = -1
+        else:
+            fell_rose_sign = 1
+        change_temp_1 = abs(start_temp) + random.randint(1,6)
+        temp_2 = start_temp + change_temp_1
+        change_temp_2 = random.randint(5, 12)
+
+        doubled_tripled = random.choice(['doubled', 'tripled'])
+        if doubled_tripled == 'doubled':
+            multiplier = 2
+        else:
+            multiplier = 3
+        mult_first = random.choice([True, False])
+
+        if mult_first:
+            operation_2 = doubled_tripled
+            operation_3 = fell_rose_2
+            phrase_2 = f"{doubled_tripled}"
+            phrase_3 = f"{fell_rose_2} {change_temp_2} degrees"
+            temp_3 = temp_2 * multiplier
+            temp_4 = temp_3 + fell_rose_sign * change_temp_2
+        else:
+            operation_2 = fell_rose_2
+            operation_3 = doubled_tripled
+            phrase_2 = f"{fell_rose_2} {change_temp_2} degrees"
+            phrase_3 = f"{doubled_tripled}"
+            temp_3 = temp_2 + fell_rose_sign * change_temp_2
+            temp_4 = temp_3 * multiplier
+
+        problem = (
+            f"One {season} night the temperature rose {change_temp_1} degrees between "
+            f"{sm.convert_to_12_hour(start_time)} and {time_1}. By {time_2}, "
+            f"the temperature {phrase_2} from what it was at {time_1}. By "
+            f"{time_3}, it {phrase_3} from what it was at {time_2}. "
+            f"If the temperature was {temp_4} degrees at {time_3}, what was the original temperature at "
+            f"{sm.convert_to_12_hour(start_time)}?"
+        )
+
+        solution = (
+            f"Start temp = {start_temp}\n"
+            f"Temp2 = {temp_2}\n"
+            f"Temp3 = {temp_3}\n"
+            f"Temp4 = {temp_4}"
+        )
+        return problem, solution
 
     def travel_to_cabin():
         person = sm.random_person()
@@ -224,9 +280,9 @@ def generate(**kwargs):
 
     beginning_0 = []
     sub_whole_1 = []
-    mult_div_whole_2 = [travel_to_cabin] # [contractor_selection, cookie_stand, can_production, buying_house]
-    int_pemdas_3 = []
-    add_sub_frac_4 = [christmas_decorations, walking_distance]
+    mult_div_whole_2 = [] # [travel_to_cabin, contractor_selection, cookie_stand, can_production, buying_house]
+    int_pemdas_3 = [temperature_change]
+    add_sub_frac_4 = [] # [christmas_decorations, walking_distance]
     mult_div_frac_5 = []
 
     versions_lists = [beginning_0, sub_whole_1, mult_div_whole_2, int_pemdas_3, add_sub_frac_4, mult_div_frac_5]
@@ -235,13 +291,17 @@ def generate(**kwargs):
         return sum(versions_lists[:n + 1], [])
 
     available_versions = get_available_versions(course_progress)
+    print(available_versions)
 
     prob_sol_function = random.choice(available_versions)
 
     problem, solution = prob_sol_function()
-
+    print(problem)
+    print("")
+    print(solution)
     return {
         'problem': problem,
         'solution': solution,
     }
 
+generate()

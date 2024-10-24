@@ -13,7 +13,7 @@ def generate(**kwargs):
     beginning_0 = ['add-coladd-1p', 'add-lattice-1p', 'add-mental-1p', 'add-standard-1p', 'add-standard-2p']
     sub_whole_1 = ['sub-standard-1p', 'sub-trades-1p']
     mult_div_whole_2 = ['mult-lattice-1p', 'mult-partial-1p', 'mult-standard-1p', 'div-scaffold-1p', 'div-standard-1p']
-    int_pemdas_3 = []
+    int_pemdas_3 = ['pemdas-1p', 'pemdas-2p']
     add_sub_frac_4 = []
     mult_div_frac_5 = []
 
@@ -127,6 +127,24 @@ def generate(**kwargs):
                 'work_desc_1': "The student was trying to divide ",
                 'work_math': '642 \\div 6',
                 'work_desc_2': " using the standard algorithm.",
+                'incorrect': "",
+                'thinking': "",
+                'feedback': "",
+            },
+        'pemdas-1p':
+            {
+                'work_desc_1': "The student was trying to compute ",
+                'work_math': '23-(4+2)^2',
+                'work_desc_2': " using the standard order of operations.",
+                'incorrect': "",
+                'thinking': "",
+                'feedback': "",
+            },
+        'pemdas-2p':
+            {
+                'work_desc_1': "The student was trying to compute ",
+                'work_math': '1 - 32 \\div 4 \\times 2',
+                'work_desc_2': " using the standard order of operations.",
                 'incorrect': "",
                 'thinking': "",
                 'feedback': "",

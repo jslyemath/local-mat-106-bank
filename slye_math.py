@@ -13,6 +13,11 @@ def main():
 
 def normalize_time_str(time_str):
     """Normalize time string to a consistent format (e.g., 8:00 AM or 23:00 for 24-hour)."""
+    try:
+        int(time_str)
+        time_str = f"{int(time_str):02}:00"
+    except:
+        pass
     time_str = time_str.strip().lower()
 
     # Check if the input is a 24-hour format like '23:00' or '09:30'
@@ -31,11 +36,12 @@ def normalize_time_str(time_str):
 
 def is_24_hour_format(time_str):
     """Check if the time string is in 24-hour format."""
-    return re.match(r'^\d{1,2}:\d{2}$', time_str)
+    return re.match(r'^\d{1,2}:\d{2}$', time_str) is not None
 
 
 def convert_to_24_hour(time_str):
     """Converts various time string formats (12-hour or 24-hour) to a 24-hour time."""
+    time_str = str(time_str)
     normalized_time_str = normalize_time_str(time_str)
 
     # If already in 24-hour format, just parse it as is
@@ -47,7 +53,13 @@ def convert_to_24_hour(time_str):
 
 
 def convert_to_12_hour(time_obj):
-    """Converts a 24-hour datetime object back to a 12-hour time string."""
+    """Converts a 24-hour datetime object, string, or int back to a 12-hour time string."""
+    try:
+        int(time_obj)
+        time_obj = convert_to_24_hour(time_obj)
+    except:
+        pass
+
     return time_obj.strftime('%I:%M %p').lstrip('0')
 
 
