@@ -45,7 +45,7 @@ def get_named_value(array_data, name, direction):
     return None
 
 
-def get_named_range(array_data, name, direction=None, height=None, width=None):
+def get_named_range(array_data, name, direction=None, height=None, width=None, filter_blanks=False):
     direction_map = {
         'below': (1, 0), 'down': (1, 0),
         'right': (0, 1)
@@ -81,7 +81,8 @@ def get_named_range(array_data, name, direction=None, height=None, width=None):
     range_2d = []
     for r in range(start_row, start_row + height):
         row_data = array_data[r][start_col:start_col + width]
-        row_data = [x for x in row_data if x != '']
+        if filter_blanks:
+            row_data = [x for x in row_data if x != '']
         range_2d.append(row_data)
 
     return range_2d
@@ -234,7 +235,7 @@ for col_index, item in enumerate(full_choices_array[0]):
         var_col_index = col_index
     elif item == '1:':
         first_choice_col_index = col_index
-variants = list({x[0] for x in get_named_range(full_choices_array, 'Var:', direction='below')})
+variants = list({x[var_col_index] for x in full_choices_array[1:]})
 # Set seeds
 seeds = []
 variant_dict = {}
@@ -250,7 +251,7 @@ else:
     for variant in variants:
         variant_dict[variant] = seeds[0]
 
-chosen_skills_array = get_named_range(full_choices_array, '1:', direction='below', width=100)
+chosen_skills_array = get_named_range(full_choices_array, '1:', direction='below', width=100, filter_blanks=True)
 chosen_skills = list({sk for row in chosen_skills_array for sk in row})
 
 # create a jinja2 environment with latex-compatible markup and instantiate a template
@@ -289,6 +290,8 @@ used_versions = set()
 for row in full_choices_array[1:]:
     student_name = row[0]
     student_section = row[sec_col_index]
+    if student_section == '':
+        student_section = 'blank'
     student_variant = row[var_col_index]
     student_seed = variant_dict[student_variant]
     student_choices = [x for x in row[first_choice_col_index:] if len(str(x).strip(' ')) >= 1]

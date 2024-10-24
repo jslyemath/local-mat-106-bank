@@ -2,8 +2,6 @@ import slye_math as sm
 import math
 import random
 
-from pdf_generator import n3_n4_force_listing_method
-
 
 def generate(**kwargs):
     force_listing = False
