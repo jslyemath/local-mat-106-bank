@@ -21,7 +21,7 @@ def generate(**kwargs):
             fell_rose_sign = -1
         else:
             fell_rose_sign = 1
-        change_temp_1 = abs(start_temp) + random.randint(1,6)
+        change_temp_1 = abs(start_temp) + random.randint(3,10)
         temp_2 = start_temp + change_temp_1
         change_temp_2 = random.randint(5, 12)
 
@@ -42,6 +42,8 @@ def generate(**kwargs):
         else:
             operation_2 = fell_rose_2
             operation_3 = doubled_tripled
+            if fell_rose_2 == 'fell':
+                change_temp_2 = random.randint(1, temp_2)
             phrase_2 = f"{fell_rose_2} {change_temp_2} degrees"
             phrase_3 = f"{doubled_tripled}"
             temp_3 = temp_2 + fell_rose_sign * change_temp_2
@@ -57,9 +59,9 @@ def generate(**kwargs):
         )
 
         solution = (
-            f"Start temp $= {start_temp}$\\newline"
-            f"Temp2 $= {temp_2}$\\newline"
-            f"Temp3 $= {temp_3}$\\newline"
+            f"Start temp $= {start_temp}$\\newline "
+            f"Temp2 $= {temp_2}$\\newline "
+            f"Temp3 $= {temp_3}$\\newline "
             f"Temp4 $= {temp_4}$"
         )
         return problem, solution
@@ -291,7 +293,6 @@ def generate(**kwargs):
         return sum(versions_lists[:n + 1], [])
 
     available_versions = get_available_versions(course_progress)
-    print(available_versions)
 
     prob_sol_function = random.choice(available_versions)
 
