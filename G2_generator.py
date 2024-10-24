@@ -48,19 +48,19 @@ def generate(**kwargs):
             temp_4 = temp_3 * multiplier
 
         problem = (
-            f"One {season} night the temperature rose {change_temp_1} degrees between "
+            f"One {season} night, the temperature rose {change_temp_1} degrees between "
             f"{sm.convert_to_12_hour(start_time)} and {time_1}. By {time_2}, "
             f"the temperature {phrase_2} from what it was at {time_1}. By "
             f"{time_3}, it {phrase_3} from what it was at {time_2}. "
-            f"If the temperature was {temp_4} degrees at {time_3}, what was the original temperature at "
+            f"If the temperature was ${temp_4}$ degrees at {time_3}, what was the original temperature at "
             f"{sm.convert_to_12_hour(start_time)}?"
         )
 
         solution = (
-            f"Start temp = {start_temp}\n"
-            f"Temp2 = {temp_2}\n"
-            f"Temp3 = {temp_3}\n"
-            f"Temp4 = {temp_4}"
+            f"Start temp $= {start_temp}$\\newline"
+            f"Temp2 $= {temp_2}$\\newline"
+            f"Temp3 $= {temp_3}$\\newline"
+            f"Temp4 $= {temp_4}$"
         )
         return problem, solution
 
