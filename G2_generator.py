@@ -296,12 +296,7 @@ def generate(**kwargs):
     prob_sol_function = random.choice(available_versions)
 
     problem, solution = prob_sol_function()
-    print(problem)
-    print("")
-    print(solution)
     return {
         'problem': problem,
         'solution': solution,
     }
-
-generate()
