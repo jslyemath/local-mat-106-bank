@@ -154,5 +154,6 @@ def generate(**kwargs):
         'equiv_ans_axd': equiv_ans_axd,
         'equiv_ans_bxc': equiv_ans_bxc,
         'equiv_ans_supp_1': equiv_ans_supp_1,
-        'equiv_ans_supp_2': equiv_ans_supp_2
+        'equiv_ans_supp_2': equiv_ans_supp_2,
+        'equivalent': str(equivalent)
     }

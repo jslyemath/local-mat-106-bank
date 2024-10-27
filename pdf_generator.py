@@ -277,6 +277,7 @@ for skill in chosen_skills:
 
         for current_seed in seeds:
             random.seed(current_seed)
+            settings['seed'] = current_seed
             generated_skill_data = current_generator.generate(**settings)
             generated_skill_data['seed'] = current_seed
             variant_text = loaded_current_template.render(generated_skill_data)

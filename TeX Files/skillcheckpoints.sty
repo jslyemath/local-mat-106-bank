@@ -73,6 +73,7 @@
 
 % Custom format for T/F questions
 %\newcommand{\tfleft}[1]{\textbf{TRUE}\hspace{5pt} / \hspace{5pt}\textbf{FALSE} \hspace{7pt}  \begin{minipage}[t]{.72\textwidth} #1\end{minipage}}
+\setlength{\fboxrule}{1.2pt}
 \NewDocumentCommand{\tfleft}{o m}{% #1 is the optional answer ("True" or "False"), #2 is the statement
     \textbf{%
         \ifthenelse{\boolean{anstoggle} \AND \equal{\IfNoValueTF{#1}{dummy}{#1}}{True}}%
