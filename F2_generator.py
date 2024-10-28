@@ -2,12 +2,6 @@ import slye_math as sm
 import random
 import math
 from fractions import Fraction
-import os
-import sys
-import shutil
-import json
-import matplotlib.pyplot as plt
-import matplotlib.patches as patches
 
 
 def generate(**kwargs):
