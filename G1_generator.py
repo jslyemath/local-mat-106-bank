@@ -14,7 +14,7 @@ def generate(**kwargs):
     sub_whole_1 = ['sub-standard-1p', 'sub-trades-1p']
     mult_div_whole_2 = ['mult-lattice-1p', 'mult-partial-1p', 'mult-standard-1p', 'div-scaffold-1p', 'div-standard-1p']
     int_pemdas_3 = ['pemdas-1p', 'pemdas-2p']
-    add_sub_frac_4 = []
+    add_sub_frac_4 = ['fraction-model-1p', 'fraction-model-2p']
     mult_div_frac_5 = []
 
     versions_lists = [beginning_0, sub_whole_1, mult_div_whole_2, int_pemdas_3, add_sub_frac_4, mult_div_frac_5]
@@ -145,6 +145,24 @@ def generate(**kwargs):
                 'work_desc_1': "The student was trying to compute ",
                 'work_math': '1 - 32 \\div 4 \\times 2',
                 'work_desc_2': " using the standard order of operations.",
+                'incorrect': "",
+                'thinking': "",
+                'feedback': "",
+            },
+        'fraction-model-1p':
+            {
+                'work_desc_1': "The student was trying to model the fraction ",
+                'work_math': '\\dfrac{2}{3}',
+                'work_desc_2': " using a hexagon as the whole.",
+                'incorrect': "",
+                'thinking': "",
+                'feedback': "",
+            },
+        'fraction-model-2p':
+            {
+                'work_desc_1': "The student was trying to determine the fraction of the rectangle represented by the ",
+                'work_math': '\\text{red}',
+                'work_desc_2': " shaded portion.",
                 'incorrect': "",
                 'thinking': "",
                 'feedback': "",

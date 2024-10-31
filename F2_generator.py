@@ -16,6 +16,8 @@ def generate(**kwargs):
         'semicircle': [2, 3, 4]
     }
 
+    shapes_possibilities = [(shape, num) for shape, nums in shapes_dict.items() for num in nums]
+
     # def plot_area_model(shape='circle', numerator=1, denominator=1, dir_path='outcomes/F2/',
     #                     save_as='example_model.png'):
     #     filepath = os.path.join(dir_path, save_as)
@@ -568,7 +570,7 @@ def generate(**kwargs):
     def gen_easy_area_prob():
         shape = random.choice(list(shapes_dict.keys()))
         model_denom = int(random.choice(shapes_dict[shape]))
-        model_num = int(random.choice(sm.rel_primes(model_denom, stop=5 * model_denom)))
+        model_num = int(random.choice(sm.rel_primes(model_denom, stop=3 * model_denom)))
         orig_denom = int(1)
         orig_num = int(1)
         requested_num, requested_denom = model_num, model_denom
@@ -576,12 +578,22 @@ def generate(**kwargs):
         return shape, model_num, model_denom, orig_num, orig_denom, requested_num, requested_denom
 
     def gen_hard_area_prob():
-        shape = random.choice(list(shapes_dict.keys()))
-        model_denom = int(random.choice(shapes_dict[shape]))
-        model_num = int(random.choice(sm.rel_primes(model_denom, stop=5 * model_denom)))
-        orig_denom = int(random.randint(2, 9))
-        orig_num = int(random.choice(sm.rel_primes(orig_denom)))
-        requested_num, requested_denom = Fraction(orig_num * model_num, orig_denom * model_denom).as_integer_ratio()
+        shape_splits = shapes_possibilities[:]
+        allow_prime_model_denom = random.choices([True, False], [0.2, 0.8], k=1)[0]
+        if not allow_prime_model_denom:
+            shape_splits = [x for x in shape_splits if x[1] not in (2,3,5,7,11)]
+        shape, model_denom = random.choice(shape_splits)
+        model_denom_factor_list = sm.divisors(model_denom)
+        if model_denom not in (2,3,5,7,11):
+            model_denom_factor_list = [x for x in model_denom_factor_list if x not in (1, model_denom)]
+        orig_num = random.choice(model_denom_factor_list)
+        denom_multiplier = model_denom // orig_num
+        orig_denom_possibilities = sm.rel_primes(orig_num, start=orig_num+1, stop = orig_num*3)
+        orig_denom = random.choice(orig_denom_possibilities)
+        requested_denom = denom_multiplier * orig_denom
+        requested_num_possibilities = sm.rel_primes(requested_denom, stop=4*model_denom)
+        requested_num = random.choice(requested_num_possibilities)
+        model_num = requested_num
 
         return shape, model_num, model_denom, orig_num, orig_denom, requested_num, requested_denom
 

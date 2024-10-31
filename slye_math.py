@@ -419,10 +419,14 @@ def readable_list(seq: List[Any]) -> str:
     return ', '.join(seq[:-1]) + ', and ' + seq[-1]
 
 
-def rel_primes(n, stop=None, include_1=True):
+def rel_primes(n, start=None, stop=None, include_1=True):
     n = abs(int(n))
+    if start is None:
+        start = 1
     if stop is None:
         stop = n
+    if start > stop:
+        raise ValueError("Parameter 'start' must be less than or equal to parameter 'stop'.")
     if n == 0:
         return None
     rel_primes_list = []
@@ -431,10 +435,10 @@ def rel_primes(n, stop=None, include_1=True):
             return [1]
         else:
             return None
-    for i in range(1, stop + 1):
+    for i in range(start, stop + 1):
         if math.gcd(n, i) == 1:
             rel_primes_list.append(i)
-    if not include_1:
+    if not include_1 and 1 in rel_primes_list:
         rel_primes_list.remove(1)
     return rel_primes_list
 
