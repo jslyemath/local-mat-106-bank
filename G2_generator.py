@@ -6,7 +6,7 @@ from datetime import datetime
 
 
 def generate(**kwargs):
-    course_progress = 3 # int(kwargs['course_progress'])
+    course_progress = int(kwargs['course_progress'])
 
     def temperature_change():
         season = random.choice(['fall', 'winter'])
