@@ -588,10 +588,12 @@ def generate(**kwargs):
             model_denom_factor_list = [x for x in model_denom_factor_list if x not in (1, model_denom)]
         orig_num = random.choice(model_denom_factor_list)
         denom_multiplier = model_denom // orig_num
-        orig_denom_possibilities = sm.rel_primes(orig_num, start=orig_num+1, stop = orig_num*3)
+        orig_denom_possibilities = sm.rel_primes(orig_num, start=2, stop = orig_num*3)
         orig_denom = random.choice(orig_denom_possibilities)
         requested_denom = denom_multiplier * orig_denom
         requested_num_possibilities = sm.rel_primes(requested_denom, stop=4*model_denom)
+        if denom_multiplier == 1:
+            requested_num_possibilities = [x for x in requested_num_possibilities if x != orig_num]
         requested_num = random.choice(requested_num_possibilities)
         model_num = requested_num
 
