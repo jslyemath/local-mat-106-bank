@@ -77,6 +77,8 @@ def generate(**kwargs):
     p2_how_many = random.randint(7, 12)
     p2_a, p2_b, p2_numbers = fraction_problem(p2_how_many)
 
+    expl_how_many = random.choice(['1,000', '10,000', '100,000'])
+
     return {
         'p1_how_many': p1_how_many,
         'p1_a': p1_a,
@@ -90,5 +92,6 @@ def generate(**kwargs):
         'p2_how_many': p2_how_many,
         'p2_a': p2_a,
         'p2_b': p2_b,
-        'p2_numbers': p2_numbers
+        'p2_numbers': p2_numbers,
+        'expl_how_many': expl_how_many
     }
