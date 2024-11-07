@@ -280,7 +280,7 @@ def generate(**kwargs):
 
     # Lists of problem generator functions, split up by course progress cutoff points.
 
-    beginning_0 = []
+    beginning_0 = [] #
     sub_whole_1 = []
     mult_div_whole_2 = [travel_to_cabin, contractor_selection, cookie_stand, can_production, buying_house]
     int_pemdas_3 = [temperature_change]
