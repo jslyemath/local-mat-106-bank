@@ -256,7 +256,13 @@ def generate(**kwargs):
     explain_prob_2, explain_ans_2 = prob_ans[5]
     explain_prob_3, explain_ans_3 = prob_ans[6]
 
+    explain_prob_ans = prob_ans[4:]
+
+    random.shuffle(explain_prob_ans)
+
     random.shuffle(prob_ans)
+
+
 
     return {
         'p1_prob': prob_ans[0][0],
@@ -275,10 +281,10 @@ def generate(**kwargs):
         'p7_ans': prob_ans[6][1],
         'p8_prob': prob_ans[7][0],
         'p8_ans': prob_ans[7][1],
-        'explain_prob_1': explain_prob_1,
-        'explain_ans_1': explain_ans_1,
-        'explain_prob_2': explain_prob_2,
-        'explain_ans_2': explain_ans_2,
-        'explain_prob_3': explain_prob_3,
-        'explain_ans_3': explain_ans_3,
+        'explain_prob_1': explain_prob_ans[0][0],
+        'explain_ans_1': explain_prob_ans[0][1],
+        'explain_prob_2': explain_prob_ans[1][0],
+        'explain_ans_2': explain_prob_ans[1][1],
+        'explain_prob_3': explain_prob_ans[2][0],
+        'explain_ans_3': explain_prob_ans[2][1],
     }
