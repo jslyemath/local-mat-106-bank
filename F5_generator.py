@@ -71,7 +71,10 @@ def generate(**kwargs):
         start_dim_frac = Fraction(fractional_part_num, fractional_part_denom)
         starting_dimension = start_dim_whole + start_dim_frac
 
-        dimension_to_find, given_dimension = random.choices(['length', 'width'], k=2)
+        find_given_length_width = ['length', 'width']
+        random.shuffle(find_given_length_width)
+
+        dimension_to_find, given_dimension = find_given_length_width
 
         to_find_num, to_find_denom = 'x', sm.mixed_number(starting_dimension, format='latex')
 
@@ -92,8 +95,9 @@ def generate(**kwargs):
         )
 
         solution = (
-            f"If we place the given ratio in a proportion with our known length and width (being careful to "
-            f"attend to matching the order of the numerators and denominators), we get "
+            f"If we place the given ratio in a proportion with our known {given_dimension} and "
+            f"unknown {dimension_to_find} (being careful to "
+            f"attend to matching the order of length and width the numerators and denominators), we get "
             f"\\[ \\dfrac{{{ratio_part_and_value[0][1]}}}{{{ratio_part_and_value[1][1]}}} = "
             f"\\dfrac{{{to_find_num}}}{{{to_find_denom}}}, \\] "
             f"where $x$ is the unknown {dimension_to_find}. Solving this proportion, we get "
@@ -110,5 +114,3 @@ def generate(**kwargs):
         'problem': problem,
         'solution': solution,
     }
-
-print(generate())
