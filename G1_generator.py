@@ -14,8 +14,8 @@ def generate(**kwargs):
     sub_whole_1 = ['sub-standard-1p', 'sub-trades-1p']
     mult_div_whole_2 = ['mult-lattice-1p', 'mult-partial-1p', 'mult-standard-1p', 'div-scaffold-1p', 'div-standard-1p']
     int_pemdas_3 = ['pemdas-1p', 'pemdas-2p']
-    add_sub_frac_4 = ['fraction-model-1p', 'fraction-model-2p']
-    mult_div_frac_5 = []
+    add_sub_frac_4 = ['fraction-model-1p', 'fraction-model-2p', 'fraction-model-3p']
+    mult_div_frac_5 = ['decimal-model-1p']
 
     versions_lists = [beginning_0, sub_whole_1, mult_div_whole_2, int_pemdas_3, add_sub_frac_4, mult_div_frac_5]
 
@@ -163,6 +163,24 @@ def generate(**kwargs):
                 'work_desc_1': "The student was trying to determine the fraction of the rectangle represented by the ",
                 'work_math': '\\text{red}',
                 'work_desc_2': " shaded portion.",
+                'incorrect': "",
+                'thinking': "",
+                'feedback': "",
+            },
+        'fraction-model-3p':
+            {
+                'work_desc_1': "The student was trying to mark the locations of ",
+                'work_math': '\\frac{1}{2} \\text{ and } \\frac{1}{3}',
+                'work_desc_2': " on the number line.",
+                'incorrect': "",
+                'thinking': "",
+                'feedback': "",
+            },
+        'decimal-model-1p':
+            {
+                'work_desc_1': "The student was trying to mark the locations of ",
+                'work_math': '0.11 \\text{ through } 0.19',
+                'work_desc_2': " on the number line.",
                 'incorrect': "",
                 'thinking': "",
                 'feedback': "",
