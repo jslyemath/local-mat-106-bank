@@ -6,7 +6,9 @@ from decimal import Decimal
 
 def generate(**kwargs):
     # (a) Convert fraction to decimal
-    allow_repeating_dec = True
+    allow_repeating_dec = False
+    if kwargs['d2_allow_repeating']:
+        allow_repeating_dec = True
 
     def frac_to_repeating_dec():
         period = random.randint(1, 2)
