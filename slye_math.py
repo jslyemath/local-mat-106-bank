@@ -295,7 +295,7 @@ def dec_string(dec_offset=-1, place_values=1, excl_first=[0], excl_last=[0], wt_
     return our_dec_string
 
 
-def base_conv_list(original_int, base):
+def base_conv(original_int, base=10, output='list'):
     # https://stackoverflow.com/questions/2267362/how-to-convert-an-integer-to-a-string-in-any-base
     if original_int == 0:
         return [0]
@@ -303,16 +303,22 @@ def base_conv_list(original_int, base):
     while original_int:
         digits.append(int(original_int % base))
         original_int //= base
-    return digits[::-1]
+    if output == 'str':
+        if 11 <= base <= 36:
+            digits = [chr(x + 55) if 10 <= x <= 35 else x for x in digits]
+        elif base > 36:
+            digits = [f"[{x}]" for x in digits]
+        return ''.join(map(str, digits[::-1]))
+    else:
+        return digits[::-1]
 
 
-def int_base_op(num1, num2, op, base):
+def str_int_base_op(num1, num2, op, base):
     base = int(base)
     num1 = str(num1)
     num2 = str(num2)
     op = str(op)
-    val_as_list = base_conv_list(eval(str(int(num1, base=base)) + op + str(int(num2, base=base))), base)
-    return int(''.join([str(elem) for elem in val_as_list]))
+    return base_conv(eval(str(int(num1, base=base)) + op + str(int(num2, base=base))), base, output='str')
 
 
 def to_egyptian(num):
@@ -330,7 +336,7 @@ def to_egyptian(num):
 
 
 def to_simple_babylonian(num):
-    base_60 = base_conv_list(num, 60)
+    base_60 = base_conv(num, 60)
 
     bab_python_zero = '\\babz'
 

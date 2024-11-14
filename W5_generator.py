@@ -46,7 +46,7 @@ def generate(**kwargs):
 
     base_b_prob = f'{base_b_num1}_\\text{{{base_b_ss}}} \\times {base_b_num2}_\\text{{{base_b_ss}}}'
     base_b_alg = mult_alg_vars[1][0]
-    base_b_ans = f'{sm.int_base_op(base_b_num1, base_b_num2, "*", base_b_base)}_\\text{{{base_b_ss}}}'
+    base_b_ans = f'{sm.str_int_base_op(base_b_num1, base_b_num2, "*", base_b_base)}_\\text{{{base_b_ss}}}'
 
     return {
         'base_ten_prob': base_ten_prob,
