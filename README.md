@@ -4,5 +4,5 @@ This repository contains Python files using the same logic as the sage files fro
 ## Ready to Go?
 The following skills are completely ready for local printing:
 
-G1-G2, W1-W6, N1-N4, F1-F4, D1
+G1-G2, W1-W6, N1-N4, F1-F5, D1-D3
 
