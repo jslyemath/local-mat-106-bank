@@ -478,6 +478,14 @@ def random_person(gender=None, avoid=[]):
     return person
 
 
+def format_money(amount, currency_symbol='$'):
+    amount = Decimal(amount)
+    if amount == amount.to_integral_value():
+        return f"{currency_symbol}{int(amount)}"
+    else:
+        return f"{currency_symbol}{amount:.2f}"
+
+
 def verb_switch(v, g):
     singular = False if g == 'n' or g == 'p' else True
     # Looks for pairs (tuples, lists, etc.). Returns left if singular, right if plural.
