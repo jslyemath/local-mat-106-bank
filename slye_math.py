@@ -1,7 +1,7 @@
 import random
 import math
 from fractions import Fraction
-from decimal import Decimal
+from decimal import Decimal, ROUND_HALF_UP
 from typing import Any, List
 import re
 from datetime import datetime, timedelta
@@ -483,7 +483,7 @@ def format_money(amount, currency_symbol='$'):
     if amount == amount.to_integral_value():
         return f"{currency_symbol}{int(amount)}"
     else:
-        return f"{currency_symbol}{amount:.2f}"
+        return f"{currency_symbol}{amount.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)}"
 
 
 def verb_switch(v, g):
